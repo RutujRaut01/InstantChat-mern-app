@@ -17,7 +17,10 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 // Dynamically locate frontend build
+
+// To this (added an extra ../):
 const frontendPath = path.resolve(__dirname, "../../frontend/dist");
+
 
 
 if (ENV.NODE_ENV === "production") {
