@@ -18,7 +18,8 @@ app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
 
 // Dynamically locate frontend build
-const frontendPath = path.resolve(__dirname, "../frontend/dist");
+const frontendPath = path.resolve(__dirname, "../../frontend/dist");
+
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static(frontendPath));
